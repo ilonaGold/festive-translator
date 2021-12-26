@@ -1,0 +1,73 @@
+:root {
+  --dark-green: #249636;
+  --light-green: #bae029;
+  --yellow: #ffff00;
+  --snow: #f0f4f7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 1s;
+}
+
+body,
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--dark-green) url("images/christmas_bg.jpg") no-repeat center;
+  background-size: 100% 100%;
+}
+
+.container {
+  min-width: 325px;
+  min-height: 325px;
+  max-width: 5ch;
+  padding: 1em;
+  margin: 0 0 0.5em;
+  background: rgba(36, 150, 54, 0.5);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.greeting-text {
+  font-family: "Courier Prime";
+  font-size: 2.5rem;
+  color: var(--snow);
+}
+
+.transition {
+  animation-name: colorChange;
+  animation-duration: 2s;
+}
+
+select {
+  height: 60px;
+  width: 325px;
+  border: 3px solid var(--dark-green);
+  border-radius: 5px;
+  padding: 0.2em 0.3em;
+  font-size: 1.4rem;
+  color: var(--dark-green);
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+@keyframes colorChange {
+  from {
+    color: var(--light-green);
+  }
+  to {
+    color: var(--yellow);
+  }
+}
